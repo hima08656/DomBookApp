@@ -1,0 +1,68 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin - Book Management App</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <nav class="top-nav">
+        <a href="index.html">Home</a>
+    </nav>
+
+    <main class="container">
+        <h2>Book Management</h2>
+
+        <section class="controls">
+            <form id="book-form" class="card">
+                <div class="row">
+                    <label>Title</label>
+                    <input type="text" id="title" placeholder="Enter title" required />
+                </div>
+                <div class="row">
+                    <label>Author</label>
+                    <input type="text" id="author" placeholder="Enter author" required />
+                </div>
+                <div class="row">
+                    <label>Category</label>
+                    <select id="category" required>
+            <option value="">Select category</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Technical">Technical</option>
+          </select>
+                </div>
+                <button type="submit">Add Book</button>
+            </form>
+
+            <div class="toolbar">
+                <div class="sort">
+                    <button id="sort-az">Sort by Title A → Z</button>
+                    <button id="sort-za">Sort by Title Z → A</button>
+                </div>
+                <div class="filter">
+                    <label for="filter-category">Filter by Category</label>
+                    <select id="filter-category">
+            <option value="All">All</option>
+            <option value="Fiction">Fiction</option>
+            <option value="Comedy">Comedy</option>
+            <option value="Technical">Technical</option>
+          </select>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Books</h3>
+            <div id="books-grid" class="grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
